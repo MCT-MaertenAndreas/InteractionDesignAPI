@@ -1,0 +1,230 @@
+/**
+ * Settings
+ */
+@font-face {
+    font-display: swap;
+    font-family: 'Sansation';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../Sansation_Regular.ttf);
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Sansation';
+    font-style: italic;
+    font-weight: 400;
+    src: url(../Sansation_Italic.ttf);
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Sansation';
+    font-style: normal;
+    font-weight: 600;
+    src: url(../Sansation_Bold.ttf);
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Sansation';
+    font-style: italic;
+    font-weight: 600;
+    src: url(../Sansation_Bold_Italic.ttf);
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Sansation';
+    font-style: normal;
+    font-weight: 200;
+    src: url(../Sansation_Light.ttf);
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Sansation';
+    font-style: italic;
+    font-weight: 200;
+    src: url(../Sansation_Light_Italic.ttf);
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'space age';
+    src: url(../space-age.ttf);
+}
+
+/**
+ * Generic
+ */
+:root {
+    --color-base: #000;
+    --color-accent-yellow: #ffeb00;
+    --color-accent-red: #c80000;
+    --color-accent-xx-lightblue: #48a4d6;
+    --color-accent-x-lightblue: #2883ba;
+    --color-accent-blue: #317499;
+    --color-accent-x-darkblue: #3a6f9b;
+    --color-accent-xx-darkblue: #286088;
+
+    --global-background: linear-gradient(97deg, var(--color-accent-xx-lightblue), var(--color-accent-blue));
+    --global-color: #f8f8f8;
+
+    --global-baseline: 8px;
+    --global-baseline-x: calc(var(--global-baseline) * 2);
+    --global-baseline-xx: calc(var(--global-baseline) * 3);
+    --global-baseline-xxx: calc(var(--global-baseline) * 4);
+    --global-baseline-xxxx: calc(var(--global-baseline) * 5);
+    --global-baseline-xxxxx: calc(var(--global-baseline) * 6);
+}
+
+/**
+ * Elements
+ */
+html {
+    background: var(--global-background);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: var(--global-color);
+
+    font-family: 'Sansation', sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--color-accent-yellow);
+    text-decoration: none;
+
+    transition: 150ms ease;
+}
+a:hover {
+    color: var(--color-accent-red);
+
+    transition: 300ms ease;
+}
+
+/**
+ * Components
+ */
+/**
+ * Component: Header
+ */
+.c-header {
+    margin: var(--global-baseline-xx) 0;
+
+    text-align: center;
+}
+
+.c-logo {
+    background: #f8f8f8;
+    /*background: linear-gradient(270deg, var(--color-accent-yellow), var(--color-accent-red)); */
+
+    font-family: "space age", sans-serif;
+    font-size: 48px;
+
+    text-shadow: 0 0 64px #0005;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+/**
+ * Component: Main App Content
+ */
+.c-app {
+    margin: 0 auto;
+
+    width: 60%;
+}
+
+/**
+ * Components: Landing Page
+ */
+.c-landing {
+    background-color: var(--color-accent-xx-lightblue);
+
+    border-radius: var(--global-baseline);
+    box-shadow: -3px 3px 12px 6px rgb(0,0,0) 5%;
+
+    color: var(--color-base);
+
+    margin: var(--global-baseline);
+    padding: var(--global-baseline-x) var(--global-baseline-xxx) var(--global-baseline-xxx);
+}
+.c-title {
+    color: var(--global-color);
+    text-shadow: 3px 3px 12px #00000022;
+}
+
+/**
+ * Components: Form
+ */
+.c-form {
+    display: flex;
+    flex-direction: column;
+}
+.c-form > .c-label {
+    color: #666;
+}
+.c-form .c-input {
+    all: unset;
+
+    background-color: var(--global-color);
+
+    border: 1px solid var(--color-base);
+    border-radius: 3px 0 0 3px;
+    border-right: 0;
+
+    padding: var(--global-baseline) var(--global-baseline-x);
+
+    width: 250px;
+}
+.c-form .c-input::placeholder {
+
+}
+.c-form__button--submit {
+    all: unset;
+
+    background-color: var(--color-accent-x-lightblue);
+
+    border: 1px solid var(--color-base);
+    border-radius: 0 3px 3px 0;
+
+    color: var(--global-color);
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    padding: var( --global-baseline) var(--global-baseline-x);
+}
+
+/**
+ * Component: Footer
+ */
+.c-footer {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/**
+ * Utilities
+ */
+.u-flex {
+    display: flex;
+}
+
+/**
+ * Media
+ */
+@media () {
+
+}
