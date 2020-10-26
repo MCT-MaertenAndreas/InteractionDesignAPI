@@ -6,49 +6,49 @@
     font-family: 'Sansation';
     font-style: normal;
     font-weight: 400;
-    src: url(../Sansation_Regular.ttf);
+    src: url(../fonts/Sansation_Regular.ttf);
 }
 @font-face {
     font-display: swap;
     font-family: 'Sansation';
     font-style: italic;
     font-weight: 400;
-    src: url(../Sansation_Italic.ttf);
+    src: url(../fonts/Sansation_Italic.ttf);
 }
 @font-face {
     font-display: swap;
     font-family: 'Sansation';
     font-style: normal;
     font-weight: 600;
-    src: url(../Sansation_Bold.ttf);
+    src: url(../fonts/Sansation_Bold.ttf);
 }
 @font-face {
     font-display: swap;
     font-family: 'Sansation';
     font-style: italic;
     font-weight: 600;
-    src: url(../Sansation_Bold_Italic.ttf);
+    src: url(../fonts/Sansation_Bold_Italic.ttf);
 }
 @font-face {
     font-display: swap;
     font-family: 'Sansation';
     font-style: normal;
     font-weight: 200;
-    src: url(../Sansation_Light.ttf);
+    src: url(../fonts/Sansation_Light.ttf);
 }
 @font-face {
     font-display: swap;
     font-family: 'Sansation';
     font-style: italic;
     font-weight: 200;
-    src: url(../Sansation_Light_Italic.ttf);
+    src: url(../fonts/Sansation_Light_Italic.ttf);
 }
 
 
 @font-face {
     font-display: swap;
     font-family: 'space age';
-    src: url(../space-age.ttf);
+    src: url(../fonts/space-age.ttf);
 }
 
 /**
