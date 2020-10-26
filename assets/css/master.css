@@ -93,6 +93,15 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    line-height: 1.5;
+}
+
 a {
     color: var(--color-accent-yellow);
     text-decoration: none;
@@ -138,61 +147,90 @@ a:hover {
 .c-app {
     margin: 0 auto;
 
-    width: 60%;
+    width: 98%;
+}
+
+/**
+ * Components: Card
+ */
+.c-card {
+    --local-backgroundColor: var(--global-color);
+    --local-color: var(--color-base);
+    --local-padding: var(--global-baseline-x) var(--global-baseline-xxx);
+
+    background-color: var(--global-color);
+
+    border-radius: var(--global-baseline-x);
+
+    color: var(--color-base);
+
+    overflow: hidden;
+}
+.c-card__header {
+    padding: var(--local-padding);
+}
+.c-card__body {
+    background-color: var(--local-backgroundColor);
+
+    border-radius: var(--global-baseline-x);
+
+    box-shadow: 0 7px 12px 4px #00000047;
+
+    padding: var(--local-padding) var(--global-baseline-xxxx);
 }
 
 /**
  * Components: Landing Page
  */
 .c-landing {
-    background-color: var(--color-accent-xx-lightblue);
-
-    border-radius: var(--global-baseline);
     box-shadow: -3px 3px 12px 6px rgb(0,0,0) 5%;
 
     color: var(--color-base);
 
     margin: var(--global-baseline);
-    padding: var(--global-baseline-x) var(--global-baseline-xxx) var(--global-baseline-xxx);
 }
+
 .c-title {
-    color: var(--global-color);
-    text-shadow: 3px 3px 12px #00000022;
+    color: var(--color-accent-blue);
 }
 
 /**
  * Components: Form
  */
 .c-form {
+    --border-color: #ccc;
+
+    align-items: center;
+
     display: flex;
+
     flex-direction: column;
 }
-.c-form > .c-label {
+.c-form .c-label {
     color: #666;
+
+    display: block;
+
+    margin-bottom: var(--global-baseline);
 }
 .c-form .c-input {
     all: unset;
 
     background-color: var(--global-color);
 
-    border: 1px solid var(--color-base);
-    border-radius: 3px 0 0 3px;
+    border: 1px solid var(--border-color);
+    border-radius: 30px 0 0 30px;
     border-right: 0;
 
     padding: var(--global-baseline) var(--global-baseline-x);
-
-    width: 250px;
-}
-.c-form .c-input::placeholder {
-
 }
 .c-form__button--submit {
     all: unset;
 
-    background-color: var(--color-accent-x-lightblue);
+    background-color: var(--color-accent-xx-lightblue);
 
-    border: 1px solid var(--color-base);
-    border-radius: 0 3px 3px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 0 30px 30px 0;
 
     color: var(--global-color);
 
@@ -209,10 +247,10 @@ a:hover {
  * Component: Footer
  */
 .c-footer {
-    position: fixed;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: var(--global-baseline) 0 var(--global-baseline-xxx);
+
+    text-align: center;
+    width: 100%;
 }
 
 /**
@@ -225,6 +263,17 @@ a:hover {
 /**
  * Media
  */
-@media () {
+@media only screen and (min-width: 960px) and (min-height: 1100px) {
+    .c-app {
+        width: 60%;
+    }
+}
 
+/**
+ * Ultrawide resolutions
+ */
+@media only screen and (min-width: 2000px) and (min-height: 1100px) {
+    .c-app {
+        width: 40%;
+    }
 }
