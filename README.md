@@ -12,7 +12,7 @@ We're supposed to make an one page website, which visualises "live data" from a 
 
 The website has a landing page announcing the upcoming release of the application and has "fictive" email subscription form.
 
-When the release data is reached you should be able to see and use the application.
+When the release date is reached you should be able to see and use the application.
 
 It makes use of the [SuperHero API](https://superheroapi.com/).
 
