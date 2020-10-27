@@ -1,9 +1,5 @@
 import Data from './data.js'
 
-// This is a school assignment, please do not abuse
-const AccessToken = '2800070140250324';
-export const BaseURL = 'https://superheroapi.com/api/';
-
 /**
  * {@link https://superheroapi.com/#api-references}
  */
@@ -24,8 +20,7 @@ export default class HeroAPI {
             return;
         }
 
-        const res = await Data.get(BaseURL + AccessToken + '/' + characterId + path);
-
+        const res = await Data.get('/api/' + characterId + path);
         return res.json();
     }
 
@@ -91,7 +86,7 @@ export default class HeroAPI {
      * @returns {Promise<Object[]>}
      */
     static async search(name) {
-        const res = await Data.get(BaseURL + AccessToken + '/search/' + name);
+        const res = await Data.get('/api/search/' + name);
         return res.json();
     }
 
