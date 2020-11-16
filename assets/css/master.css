@@ -244,6 +244,73 @@ a:hover {
 }
 
 /**
+ * Component: Hero
+ */
+.c-hero {
+
+}
+
+.c-hero__image {
+    height: 250px;
+
+    border-radius: var(--global-baseline-xxx);
+}
+
+.c-hero__short-info {
+    width: 100%;
+
+    padding-left: var(--global-baseline-xxx);
+}
+
+.c-hero__biography {
+
+}
+
+.c-hero__biography-section span:first-child {
+    display: inline-block;
+
+    font-weight: 600;
+
+    min-width: 112px;
+}
+
+.c-hero__powerstats {
+    text-align: center;
+}
+.c-hero__powerstats > div {
+    width: 50%;
+}
+
+.c-hero__powerstats-category span {
+    display: block;
+
+    font-weight: 600;
+}
+
+.c-button__play-pause {
+    outline: none;
+
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+    border-color: transparent transparent transparent #202020;
+    transition: 100ms all ease;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+}
+
+.c-button__play-pause.paused {
+    border-style: double;
+    border-width: 0px 0 0px 60px;
+}
+.c-button__play-pause:hover {
+    border-color: transparent transparent transparent #404040;
+}
+
+/**
  * Component: Footer
  */
 .c-footer {
@@ -263,7 +330,7 @@ a:hover {
 /**
  * Media
  */
-@media only screen and (min-width: 960px) and (min-height: 1100px) {
+@media only screen and (min-width: 960px) and (min-height: 500px) {
     .c-app {
         width: 60%;
     }
