@@ -114,6 +114,36 @@ a:hover {
     transition: 300ms ease;
 }
 
+progress {
+    --progress-backgroundColor: #ccc;
+
+    vertical-align: middle;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    min-width: 100%;
+
+    background-color: var(--progress-backgroundColor);
+
+    height: 6px;
+
+    border-radius: 2px;
+    border: none;
+
+    overflow: hidden;
+}
+::-webkit-progress-value {
+    background-color: var(--color-accent-blue);
+}
+::-webkit-progress-bar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.125) inset;
+
+    background-color: var(--progress-backgroundColor);
+}
+
+
 /**
  * Components
  */
@@ -250,16 +280,31 @@ a:hover {
 
 }
 
+.c-hero .c-card__header {
+    display: grid;
+}
+
+.c-hero__progress {
+    display: block;
+}
+.c-hero__progress::-webkit-progress-value {
+    background-color: var(--color-accent-x-lightblue);
+}
+.c-hero__progress::-webkit-progress-bar {
+    box-shadow: none;
+
+    background-color: transparent;
+}
+
 .c-hero__image {
-    height: 250px;
+    margin: 0 auto;
+    max-width: 100%;
 
     border-radius: var(--global-baseline-xxx);
 }
 
 .c-hero__short-info {
     width: 100%;
-
-    padding-left: var(--global-baseline-xxx);
 }
 
 .c-hero__biography {
@@ -275,10 +320,14 @@ a:hover {
 }
 
 .c-hero__powerstats {
-    text-align: center;
+    display: grid;
+
+    grid-template-rows: 50% 50%;
 }
 .c-hero__powerstats > div {
-    width: 50%;
+    margin: 0 auto;
+
+    width: 80%;
 }
 
 .c-hero__powerstats-category span {
@@ -293,11 +342,16 @@ a:hover {
     border: 0;
     background: transparent;
     box-sizing: border-box;
+
+    margin: var(--global-baseline-xx) auto 0;
     width: 0;
     height: 74px;
-    border-color: transparent transparent transparent #202020;
+
     transition: 100ms all ease;
+
     cursor: pointer;
+
+    border-color: transparent transparent transparent #202020;
     border-style: solid;
     border-width: 37px 0 37px 60px;
 }
@@ -321,16 +375,29 @@ a:hover {
 }
 
 /**
- * Utilities
- */
-.u-flex {
-    display: flex;
-}
-
-/**
  * Media
  */
 @media only screen and (min-width: 960px) and (min-height: 500px) {
+    .c-button__play-pause {
+        position: absolute;
+
+        top: 15px;
+        right: 50px;
+    }
+
+    .c-hero .c-card__header {
+        grid-template-columns: 30% auto;
+    }
+
+    .c-hero__short-info {
+        margin-left: var(--global-baseline-xxx);
+    }
+
+    .c-hero__powerstats {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    }
+
     .c-app {
         width: 60%;
     }
