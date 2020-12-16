@@ -4,16 +4,19 @@ import Router from './router.js'
 
 export default class HeroAPP {
     _ = false;
+    _page;
     router = new Router(this);
 
     constructor() {
-        this._loadLanding();
+        this._page = location.hash == '' ? '/hero' : location.hash.split('#')[1];
+
+        this._loadPage(this._page);
 
         this.router.registerClassForPath('/hero', new Hero());
     }
 
-    async _loadLanding() {
-        await this.router.prepare('/hero');
+    async _loadPage(page) {
+        await this.router.prepare(page);
 
         this._ready();
     }
@@ -22,7 +25,7 @@ export default class HeroAPP {
      * @private
      */
     _ready() {
-        if (this._) this.router.navigate('/hero');
+        if (this._) this.router.navigate(this._page);
         this._ = true;
     }
 
